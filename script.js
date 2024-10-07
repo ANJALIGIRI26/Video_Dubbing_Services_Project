@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const linkInput = document.getElementById('link-input');
 
     pasteLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        linkInput.style.display = 'block'; // Show the input field
-        linkInput.focus(); // Focus on the input field
+        event.preventDefault(); 
+        linkInput.style.display = 'block'; 
+        linkInput.focus(); 
     });
 
     register.addEventListener('#register', function(e){
