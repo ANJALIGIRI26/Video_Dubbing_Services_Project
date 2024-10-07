@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Dubbing Services</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script> <!-- Google login SDK -->
 </head>
 <body>
     <header>
@@ -12,9 +13,10 @@
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#source">Source</a></li>
+                <li><a href="#target">Target</a></li>
+                <li><a href="register.html">Register</a></li> <!-- Link to register.html -->
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -22,48 +24,46 @@
     <section id="home">
         <h2>Welcome to Our Video Dubbing Service</h2>
         <p>We offer professional video dubbing services in multiple languages.</p>
-        <button>Learn More</button>
     </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Language Translation</h3>
-            <p>We translate your video scripts into multiple languages.</p>
-        </div>
-        <div class="service">
-            <h3>Voice Over</h3>
-            <p>Professional voice-over artists for high-quality dubbing.</p>
-        </div>
-        <div class="service">
-            <h3>Synchronization</h3>
-            <p>Perfect synchronization of audio with video.</p>
-        </div>
-    </section>
+    <section id="ai-video-dubber">
+        <h2>AI Video Dubber</h2>
+        <p>Upload a video and see the video dubber in action.</p>
+        <form>
+            <label for="source-language">Source:</label>
+            <select id="source-language" name="source-language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a team of professionals dedicated to providing the best video dubbing services.</p>
-    </section>
+            <label for="target-language">Target:</label>
+            <select id="target-language" name="target-language">
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <button type="submit">Send</button>
+            <label for="video-upload">Upload a video:</label>
+            <input type="file" id="video-upload" name="video-upload" accept="video/*">
+
+            <p>or <a href="#" id="paste-link">paste a link</a></p>
+            <input type="text" id="link-input" name="link-input" placeholder="Paste video link here" style="display: none;">
+
+            <button type="submit">Submit</button>
         </form>
     </section>
+
+    <!-- Register Form -->
+    
 
     <footer>
         <p>&copy; 2024 Video Dubbing Services. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
+
