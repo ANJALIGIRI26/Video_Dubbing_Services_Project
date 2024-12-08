@@ -1,16 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const pasteLink = document.getElementById('paste-link');
-    const linkInput = document.getElementById('link-input');
 
-    pasteLink.addEventListener('click', function(event) {
-        event.preventDefault(); 
-        linkInput.style.display = 'block'; 
-        linkInput.focus(); 
-    });
-
-    register.addEventListener('#register', function(e){
-        e.preventDefault();
+document.getElementById('video-upload').addEventListener('change', function(event) {
+    const file = event.target.files[0]; 
+    if (file) {
+        const videoPlayer = document.getElementById('video-player');
+        videoPlayer.src = URL.createObjectURL(file);
+        videoPlayer.load(); 
+        videoPlayer.play(); 
     }
-)
-    
+});
+
+
+document.getElementById('paste-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('link-input').style.display = 'block';
+    document.getElementById('link-input').focus();
+});
+
+
+document.getElementById('video-upload-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+   
 });
