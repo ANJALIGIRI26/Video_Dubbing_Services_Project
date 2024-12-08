@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Dubbing Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://accounts.google.com/gsi/client" async defer></script> <!-- Google login SDK -->
 </head>
 <body>
     <header>
@@ -15,8 +14,6 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#source">Source</a></li>
                 <li><a href="#target">Target</a></li>
-                <li><a href="register.html">Register</a></li> <!-- Link to register.html -->
-                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -25,6 +22,55 @@
         <h2>Welcome to Our Video Dubbing Service</h2>
         <p>We offer professional video dubbing services in multiple languages.</p>
     </section>
+
+    <section id="ai-video-dubber">
+        <h2>Video Dubber</h2>
+        <p>Upload a video and see the video dubber in action.</p>
+        <form id="video-upload-form">
+            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                <div style="flex: 1;">
+                    <label for="source-language">Source:</label>
+                    <select id="source-language" name="source-language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="hindi">Hindi</option>
+                    </select>
+
+                    <label for="target-language">Target:</label>
+                    <select id="target-language" name="target-language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="hindi">Hindi</option>
+                    </select>
+
+                    <label for="video-upload">Upload a video:</label>
+                    <input type="file" id="video-upload" name="video-upload" accept="video/*">
+
+                    <p>or <a href="#" id="paste-link">paste a link</a></p>
+                    <input type="text" id="link-input" name="link-input" placeholder="Paste video link here" style="display: none;">
+                </div>
+
+                <div style="flex: 1;">
+                    <video id="video-player" controls></video>
+                    <p id="translation"></p>
+                </div>
+            </div>
+
+            <div class="submit-button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Video Dubbing Services. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
 
     <section id="ai-video-dubber">
         <h2>AI Video Dubber</h2>
